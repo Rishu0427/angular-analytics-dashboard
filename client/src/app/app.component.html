@@ -1,0 +1,17 @@
+<div class="chart-container">
+  <h3>Sales and Trends</h3>
+  <div class="date-range">
+    <span>1 June 2024 - 7 June 2024</span>
+  </div>
+  <div style="display: block;">
+    <canvas baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [type]="barChartType">
+    </canvas>
+  </div>
+  <div class="summary">
+    <p>Total Sales: <strong>{{ totalSales }}</strong></p>
+    <p>Earnings: <strong>{{ totalEarnings }}</strong></p>
+  </div>
+</div>
