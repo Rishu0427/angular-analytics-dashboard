@@ -1,17 +1,21 @@
-<div class="chart-container">
-  <h3>Sales and Trends</h3>
-  <div class="date-range">
-    <span>1 June 2024 - 7 June 2024</span>
+<div id="chart-container">
+  <div class="chart-title">Sales and Trends</div>
+  <div class="chart-date" id="date-dropdown">
+      <img src="https://png.pngtree.com/png-vector/20190328/ourmid/pngtree-vector-calendar-icon-png-image_872118.jpg" alt="Dropdown Icon" class="icon">
+      <span>1 June 2024 - 7 June 2024</span>
   </div>
-  <div style="display: block;">
-    <canvas baseChart
-            [data]="barChartData"
-            [options]="barChartOptions"
-            [type]="barChartType">
-    </canvas>
+  <div id="chart">
+      <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [plotOptions]="chartOptions.plotOptions" 
+          [xaxis]="chartOptions.xaxis" [yaxis]="chartOptions.yaxis" [fill]="chartOptions.fill" [grid]="chartOptions.grid" 
+          [tooltip]="chartOptions.tooltip" [dataLabels]="chartOptions.dataLabels" [theme]="chartOptions.theme">
+      </apx-chart>
   </div>
-  <div class="summary">
-    <p>Total Sales: <strong>{{ totalSales }}</strong></p>
-    <p>Earnings: <strong>{{ totalEarnings }}</strong></p>
+  <div class="chart-footer">
+      <img src="https://cdn-icons-png.flaticon.com/128/1763/1763477.png" alt="Sales Icon" class="icon">
+      Total Sales: <b>12,345</b> 
+  </div>
+  <div class="chart-footer-right">
+      <img src="https://cdn-icons-png.freepik.com/512/2685/2685027.png" alt="Earnings Icon" class="icon" style="height: 18px;">
+      Earnings: <b>1,32,450</b>
   </div>
 </div>
